@@ -1,4 +1,4 @@
-# some-useless-python-projects
+# some-python-projects
 
 ## notes:
 

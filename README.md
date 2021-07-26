@@ -2,7 +2,7 @@
 
 ## notes:
 
-Enjoy using some of my useless projects :)
+Enjoy using some of my projects :)
 
 (idk I'm doing)
 

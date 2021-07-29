@@ -65,12 +65,6 @@ class Paint(object):
         self.canvas.bind('<B1-Motion>', self.paint)
         self.canvas.bind('<ButtonRelease-1>', self.reset)
 
-    def scroll_start(self, event):
-        self.canvas.scan_mark(event.x, event.y)
-
-    def scroll_move(self, event):
-        self.canvas.scan_dragto(event.x, event.y, gain=1)
-
     def use_pen(self):
         self.activate_button(self.pen_button)
 
@@ -84,15 +78,6 @@ class Paint(object):
     def background_color(self):
         color = askcolor()[1]
         self.canvas['bg'] = color
-
-    def use_eraser(self):
-        self.activate_button(self.eraser_button, eraser_mode=True)
-
-    def activate_button(self, some_button, eraser_mode=False):
-        self.active_button.config(relief=RAISED)
-        some_button.config(relief=SUNKEN)
-        self.active_button = some_button
-        self.eraser_on = eraser_mode
 
     def paint(self, event):
         self.line_width = self.choose_size_button.get()

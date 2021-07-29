@@ -64,7 +64,13 @@ class Paint(object):
         self.active_button = self.pen_button
         self.canvas.bind('<B1-Motion>', self.paint)
         self.canvas.bind('<ButtonRelease-1>', self.reset)
+'''        
+    def scroll_start(self, event):
+        self.canvas.scan_mark(event.x, event.y)
 
+    def scroll_move(self, event):
+        self.canvas.scan_dragto(event.x, event.y, gain=1)
+'''        
     def use_pen(self):
         self.activate_button(self.pen_button)
 

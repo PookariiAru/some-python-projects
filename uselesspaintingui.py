@@ -1,8 +1,5 @@
 from tkinter import *
 from tkinter.colorchooser import *
-from PIL import ImageTk, Image, ImageDraw
-from PIL import *
-import PIL
 
 class Paint(object):
 
@@ -27,26 +24,15 @@ class Paint(object):
         self.color_button = Button(self.root, text='COLOR', command=self.choose_color)
         self.color_button.grid(row=0, column=2)
 
-        #self.eraser_button = Button(self.root, text='ERASER', command=self.use_eraser)
-        #self.eraser_button.grid(row=0, column=3)
-
         self.choose_size_button = Scale(self.root, from_=1, to=100, orient=HORIZONTAL)
         self.choose_size_button.grid(row=0, column=4)
 
         self.bgcolorButton = Button(self.root, text = 'BG COLOR', command=self.background_color)
         self.bgcolorButton.grid(row=0, column=5)
-        
-        #self.WhatFileName = Entry(self.root)
-        #self.WhatFileName.grid(row=0, column=6)
-
-        #self.PNG_button = Button(self.root, text="SAVE DRAWING AS PNG", command=self.PNGsaveFILE)
-        #self.PNG_button.grid(row=1, column=6)
 
         self.clear_button = Button(self.root,text = "CLEAR", command=self.clearbutton)
         self.clear_button.grid(row=0, column=7)
-        
-        #self.image1 = PIL.Image.new("RGB", (self.width, self.height), self.white)
-        #self.draw = ImageDraw.Draw(self.image1)
+      
 
         self.canvas = Canvas(self.root, width=600, height=600)
         self.canvas.grid(row=2, columnspan=8, sticky="nsew")
@@ -78,12 +64,6 @@ class Paint(object):
         self.active_button = self.pen_button
         self.canvas.bind('<B1-Motion>', self.paint)
         self.canvas.bind('<ButtonRelease-1>', self.reset)
-
-    #def PNGsaveFILE(self):
-        #self.otherclass = Paint()
-        #self.otherclass.canvas.pack(expand=YES,fill=BOTH)
-        #self.newfilename1 = self.WhatFileName.get()+".png"
-        #self.image1.save(self.newfilename1)
 
     def scroll_start(self, event):
         self.canvas.scan_mark(event.x, event.y)

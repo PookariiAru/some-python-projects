@@ -97,7 +97,13 @@ class Paint(object):
         #for bg color
         color = askcolor()[1]
         self.canvas['bg'] = color
-
+        
+def activate_button(self, some_button, eraser_mode=False):
+        self.active_button.config(relief=RAISED)
+        some_button.config(relief=SUNKEN)
+        self.active_button = some_button
+        self.eraser_on = eraser_mode
+        
     def paint(self, event):
         
         self.line_width = self.choose_size_button.get()

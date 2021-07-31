@@ -14,7 +14,7 @@ class Paint(object):
 
         self.width = 200
         self.height = 200
-        self.white = (255, 255, 255)
+        #self.white = (255, 255, 255)
 
         self.root.title("Some Drawing U Kno")
         

@@ -98,7 +98,7 @@ class Paint(object):
         color = askcolor()[1]
         self.canvas['bg'] = color
         
-def activate_button(self, some_button, eraser_mode=False):
+    def activate_button(self, some_button, eraser_mode=False):
         self.active_button.config(relief=RAISED)
         some_button.config(relief=SUNKEN)
         self.active_button = some_button

@@ -112,7 +112,7 @@ def activate_button(self, some_button, eraser_mode=False):
         #for drawing
         if self.old_x and self.old_y:
             self.canvas.create_line(self.old_x, self.old_y, event.x, event.y,
-                               width=self.line_width, fill='white',
+                               width=self.line_width, fill='black',
                                capstyle=ROUND, smooth=TRUE, splinesteps=36)
         self.old_x = event.x
         self.old_y = event.y

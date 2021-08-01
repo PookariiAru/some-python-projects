@@ -105,6 +105,8 @@ class Paint(object):
         self.eraser_on = eraser_mode
 
     def paint(self, event): # event, when you are painting with brush
+        
+        #gets the width from 'choose_size_button'
         self.line_width = self.choose_size_button.get()
         
         #if this eraser_on is set to True, the eraser will be white

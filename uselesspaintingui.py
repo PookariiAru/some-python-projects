@@ -1,8 +1,5 @@
 from tkinter import *
 from tkinter.colorchooser import *
-from PIL import ImageTk, Image, ImageDraw
-from PIL import *
-import PIL
 
 class Paint(object):
 

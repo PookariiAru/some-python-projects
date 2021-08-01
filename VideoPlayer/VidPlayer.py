@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture("C:/Users/AndreaTancio/Downloads/py filez/SampleVideo_1280x720_5mb.mp4")
+cap = cv2.VideoCapture("SampleVideo_1280x720_5mb.mp4")
 def rescale_frame(frame, percent=30):
     width = int(frame.shape[1] * percent/ 100)
     height = int(frame.shape[0] * percent/ 100)
